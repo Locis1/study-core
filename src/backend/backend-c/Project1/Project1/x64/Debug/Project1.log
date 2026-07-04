@@ -1,4 +1,8 @@
-﻿  main.c
-C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\main.c(30,21): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
-C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\main.c(34,28): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
+﻿  Quellen werden auf Modulabhängigkeiten überprüft...
+  router.c
+C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(19,24): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
+C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(22,28): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
+C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(41,24): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
+C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(42,25): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
+C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(63,32): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
   Project1.vcxproj -> C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\x64\Debug\Project1.exe

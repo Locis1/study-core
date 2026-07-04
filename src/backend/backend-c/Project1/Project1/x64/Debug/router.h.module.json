@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Project1\\x64\\Debug\\router.h.obj",
+            "outputs": [
+                "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\Project1\\x64\\Debug\\vc145.pdb",
+                "Project1\\x64\\Debug\\",
+                "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\Project1\\x64\\Debug\\router.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "router.h",
+                    "source-path": "c:\\users\\cmaul\\desktop\\study-core\\src\\backend\\backend-c\\project1\\router.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

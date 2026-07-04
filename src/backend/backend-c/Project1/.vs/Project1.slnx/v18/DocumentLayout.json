@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\router.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|solutionrelative:router.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\C-Backend.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|solutionrelative:C-Backend.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\router.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A6C39D63-1709-47ED-A1A6-B3A0D51ED84E}|Project1.vcxproj|solutionrelative:router.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\main.c",
+              "RelativeToolTip": "main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-07-04T14:19:47.124Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "C-Backend.html",
+              "DocumentMoniker": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\C-Backend.html",
+              "RelativeDocumentMoniker": "C-Backend.html",
+              "ToolTip": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\C-Backend.html",
+              "RelativeToolTip": "C-Backend.html",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwG0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-07-04T17:35:29.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "router.c",
+              "DocumentMoniker": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\router.c",
+              "RelativeDocumentMoniker": "router.c",
+              "ToolTip": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\router.c",
+              "RelativeToolTip": "router.c",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-07-04T17:27:07.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "router.h",
+              "DocumentMoniker": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\router.h",
+              "RelativeDocumentMoniker": "router.h",
+              "ToolTip": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\router.h",
+              "RelativeToolTip": "router.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-07-04T17:25:06.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "stdio.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdio.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdio.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdio.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdio.h",
+              "ViewState": "AgIAAHICAAAAAAAAAAAqwIICAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-07-04T16:10:32.104Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Project1\\x64\\Debug\\router.obj",
+            "outputs": [
+                "Project1\\x64\\Debug\\router.h_548C03DC0258B544.ifc.dt.module.json",
+                "Project1\\x64\\Debug\\router.h_548C03DC0258B544.ifc.dt.d.json",
+                "Project1\\x64\\Debug\\router.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\cmaul\\Desktop\\study-core\\src\\backend\\backend-c\\Project1\\router.h",
+                    "source-path": "c:\\users\\cmaul\\desktop\\study-core\\src\\backend\\backend-c\\project1\\router.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
