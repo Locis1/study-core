@@ -1,0 +1,68 @@
+.server-status-badge {
+
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  
+  
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(24, 24, 27, 0.85);
+  backdrop-filter: blur(10px);        
+  border: 1px solid #3f3f46;
+  padding: 10px 18px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  
+
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e4e4e7;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #10b981; 
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse-green 2s infinite;
+}
+
+/* =========================================
+   OFFLINE STATUS 
+   ========================================= */
+
+
+.server-status-badge.offline {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+.server-status-badge.offline .pulse-dot {
+  background-color: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  animation: pulse-red 1.5s infinite; 
+}
+
+/* =========================================
+   ANIMATION
+   ========================================= */
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}

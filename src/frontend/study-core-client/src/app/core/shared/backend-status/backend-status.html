@@ -1,1 +1,12 @@
-<div [innerHTML]="safeHtml()"></div>
+@if (healthData() !== null) {
+  <div class="server-status-badge" [class.offline]="healthData().status === 'DOWN'">
+    <div class="pulse-dot"></div>
+    <span class="status-text">
+      @if (healthData().status === 'DOWN') {
+        SYSTEM OFFLINE
+      } @else {
+        API ONLINE
+      }
+    </span>
+  </div>
+}

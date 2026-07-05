@@ -11,8 +11,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  getHtmlStatus(path: string = ''): Observable<string> {
-    return this.http.get(`${this.c_apiUrl}/${path}`, { responseType: 'text' }).pipe(
+  getHtmlStatus(): Observable<string> {
+    return this.http.get(this.c_apiUrl, { responseType: 'text' }).pipe(
       catchError((error) => {
         console.error('Error fetching HTML:', error);
         return of('<p>Backend is down</p>');

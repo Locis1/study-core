@@ -13,7 +13,7 @@ export class BackendStatus implements OnInit {
   
 
   rawHtml = signal<string>('');
-  jsonData = signal<any[]>([]);
+  healthData = signal<any>(null);
 
  
   safeHtml = computed(() => {
@@ -26,8 +26,8 @@ export class BackendStatus implements OnInit {
   ) {
 
     effect(() => {
-      console.log('HTML Changed:', this.rawHtml());
-      console.log('JSON changed:', this.jsonData());
+      // console.log('HTML Changed:', this.rawHtml());
+      console.log('Health Data changed:', this.healthData());
     });
   }
 
@@ -39,7 +39,7 @@ export class BackendStatus implements OnInit {
 
    
     this.apiService.getHealthStatus().subscribe((json) => {
-      this.jsonData.set(json);
+      this.healthData.set(json);
     });
   }
 }
