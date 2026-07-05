@@ -1,0 +1,13 @@
+@if (metadata.author) {
+  <p>Author: {{ metadata.author }}</p>
+}
+
+@if (metadata.date) {
+  <p>Date: {{ metadata.date }}</p>
+}
+
+@if (mdContent) {
+  <markdown [data]="mdContent"></markdown>
+} @else {
+  <p>Loading markdown...</p>
+}
