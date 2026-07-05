@@ -1,6 +1,6 @@
 ---
-author: Christian
-date: 2026-07-06
+author: 'Christian Maul'
+date: '2026-07-06'
 ---
 # Truth Table
 

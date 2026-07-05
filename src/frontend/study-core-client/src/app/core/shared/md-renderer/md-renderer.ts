@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal, ViewEncapsulation } from '@angular/core';
 import { MarkdownComponent } from 'ngx-markdown';
 import frontMatter from 'front-matter';
 import { Metadata } from './metadata';

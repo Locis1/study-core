@@ -1,0 +1,166 @@
+/* =========================================
+   MARKDOWN BLOG STYLES (DARK ZINC THEME)
+   ========================================= */
+
+:root {
+  --md-bg-code: rgba(24, 24, 27, 0.85); /* #18181b */
+  --md-bg-inline: rgba(39, 39, 42, 0.6); /* #27272a */
+  --md-border: #3f3f46;
+  --md-text-bright: #f4f4f5;
+  --md-text-main: #e4e4e7;
+  --md-text-muted: #a1a1aa;
+  --md-accent: #10b981;
+  --md-accent-hover: #34d399;
+}
+
+.md-content {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--md-text-main);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Überschriften --- */
+.md-content h1, 
+.md-content h2, 
+.md-content h3, 
+.md-content h4 {
+  color: var(--md-text-bright);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2px;
+}
+
+.md-content h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid var(--md-border);
+  padding-bottom: 0.5rem;
+}
+
+.md-content h2 {
+  font-size: 1.75rem;
+  border-bottom: 1px solid var(--md-border);
+  padding-bottom: 0.4rem;
+}
+
+.md-content h3 { font-size: 1.4rem; }
+.md-content h4 { font-size: 1.2rem; }
+
+/* --- Text & Links --- */
+.md-content p {
+  margin-bottom: 1.25rem;
+}
+
+.md-content a {
+  color: var(--md-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.md-content a:hover {
+  color: var(--md-accent-hover);
+  border-bottom-color: var(--md-accent-hover);
+}
+
+.md-content strong {
+  color: var(--md-text-bright);
+  font-weight: 600;
+}
+
+/* --- Listen --- */
+.md-content ul, 
+.md-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.md-content li {
+  margin-bottom: 0.5rem;
+}
+
+.md-content ul li::marker {
+  color: var(--md-accent);
+}
+
+/* --- Blockquotes (Zitate) --- */
+.md-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--md-accent);
+  background: var(--md-bg-code);
+  border-radius: 0 8px 8px 0;
+  color: var(--md-text-muted);
+  font-style: italic;
+}
+
+.md-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Code Blöcke & Inline Code --- */
+.md-content code {
+  font-family: monospace;
+  font-size: 0.9em;
+  background-color: var(--md-bg-inline);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--md-accent-hover);
+}
+
+.md-content pre {
+  background-color: var(--md-bg-code);
+  border: 1px solid var(--md-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.md-content pre code {
+  background-color: transparent;
+  padding: 0;
+  color: var(--md-text-main);
+  font-size: 0.9rem;
+}
+
+/* --- Tabellen (Sehr wichtig für Mathe/Logik) --- */
+.md-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.md-content th, 
+.md-content td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--md-border);
+  text-align: left;
+}
+
+.md-content th {
+  background-color: var(--md-bg-inline);
+  color: var(--md-text-bright);
+  font-weight: 600;
+}
+
+/* --- Trennlinien --- */
+.md-content hr {
+  border: 0;
+  border-top: 1px solid var(--md-border);
+  margin: 2rem 0;
+}
+
+/* --- Bilder --- */
+.md-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--md-border);
+}
