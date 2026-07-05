@@ -6,7 +6,6 @@
 #define BUFFER_SIZE 1024
 
 // --- HelpFunction ---
-
 void sendHTML(SOCKET sock, const char* file) {
     FILE* htmlFile = fopen(file, "r");
     if (!htmlFile) {
@@ -15,7 +14,7 @@ void sendHTML(SOCKET sock, const char* file) {
     }
     char buffer[BUFFER_SIZE] = { 0 };
     size_t read = 0;
-    char* header = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n";
+    char* header = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nAccess-Control-Allow-Origin: *\r\n\r\n";
     send(sock, header, strlen(header), 0);
 
     while ((read = fread(buffer, 1, BUFFER_SIZE, htmlFile)) > 0) {
@@ -24,17 +23,31 @@ void sendHTML(SOCKET sock, const char* file) {
     fclose(htmlFile);
 }
 
+// --- JsonFunction
+void sendJson(SOCKET sock, const char* jsonMessage) {
+    const char* header =
+    "HTTP/1.1 200 OK\r\n"
+        "Content-Type: application/json\r\n" // <-- JSON
+        "Access-Control-Allow-Origin: *\r\n"
+        "\r\n";
+
+    send(sock, header, strlen(header), 0);
+    send(sock, jsonMessage, strlen(jsonMessage), 0);
+}
+
+// --- Request Parser ---
 char* parseRequest(char* request) {
     char* method = strtok(request, " ");
     char* path = strtok(NULL, " ");
     return path; 
 }
-
+// --- Message Sender ---
 void sendMessage(SOCKET sock, const char* message) {
 	// Define the HTTP response header
     const char* header =
         "HTTP/1.1 200 OK\r\n"
         "Content-Type: text/plain\r\n"
+        "Access-Control-Allow-Origin: *\r\n"
         "\r\n";
 
 	// Send the header and message to the client
@@ -53,7 +66,7 @@ void handleAbout(SOCKET clientSock) {
 }
 
 void handleHealth(SOCKET clientSock) {
-	char* healthMessage = "Server is healthy!";
+    char* healthMessage = "{\"status\": \"Server is healthy!\"}";
     sendMessage(clientSock, healthMessage);
 
 }
@@ -76,7 +89,7 @@ typedef struct {
 Route routes[] = {
     {"/", handleIndex},
     {"/about", handleAbout},
-    {"/health", handleHealth},
+    {"/api/v1/health", handleHealth},
 };
 
 int numRoutes = sizeof(routes) / sizeof(Route);
