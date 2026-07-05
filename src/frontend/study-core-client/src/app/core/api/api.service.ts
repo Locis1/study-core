@@ -24,13 +24,12 @@ private fetchJson<T>(endpoint: string, fallback: T): Observable<T> {
     return this.http.get<T>(`${this.c_apiUrl}/${endpoint}`).pipe(
       catchError((error) => {
         console.error(`FEHLER beim Laden von ${endpoint}:`, error);
-        return of(fallback); // Gibt den spezifischen Fallback zurück
+        return of(fallback); 
       })
     );
   }
 
-  getHealthStatus(): Observable<any> {
-    // Ruft die Hilfsmethode auf: Pfad rein, Fallback-Objekt rein. Fertig.
+  get_C_HealthStatus(): Observable<any> {
     return this.fetchJson<any>('api/v1/health', { status: 'DOWN' });
   }
 }

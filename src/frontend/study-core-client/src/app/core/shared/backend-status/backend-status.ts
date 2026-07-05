@@ -38,7 +38,7 @@ export class BackendStatus implements OnInit {
     });
 
    
-    this.apiService.getHealthStatus().subscribe((json) => {
+    this.apiService.get_C_HealthStatus().subscribe((json) => {
       this.healthData.set(json);
     });
   }
