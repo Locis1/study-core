@@ -9,6 +9,7 @@ import { Metadata } from './metadata';
   imports: [MarkdownComponent],
   templateUrl: './md-renderer.html',
   styleUrl: './md-renderer.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class MdRenderer implements OnInit {
   private readonly http = inject(HttpClient);

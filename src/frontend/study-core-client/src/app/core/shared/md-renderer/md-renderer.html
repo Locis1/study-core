@@ -1,15 +1,23 @@
-<div class="meta-card">
-  @if (metadata().author) {
-    <p><strong>Author:</strong> {{ metadata().author }}</p>
-  }
+<div class="tutorial-page">
+  <div class="meta-card">
+    @if (metadata().author) {
+      <div class="meta-item">
+        <span class="meta-label">Author</span>
+        <span class="meta-value">{{ metadata().author }}</span>
+      </div>
+    }
 
-  @if (metadata().date) {
-    <p><strong>Date:</strong> {{ metadata().date }}</p>
+    @if (metadata().date) {
+      <div class="meta-item">
+        <span class="meta-label">Date</span>
+        <span class="meta-value">{{ metadata().date }}</span>
+      </div>
+    }
+  </div>
+
+  @if (mdContent()) {
+    <article class="markdown-body">
+      <markdown [data]="mdContent()"></markdown>
+    </article>
   }
 </div>
-
-@if (mdContent()) {
-  <div class="md-content">
-    <markdown [data]="mdContent()"></markdown>
-  </div>
-}
