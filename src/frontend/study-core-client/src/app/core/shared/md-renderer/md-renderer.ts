@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { MarkdownComponent } from 'ngx-markdown';
 import frontMatter from 'front-matter';
 import { Metadata } from './metadata';
@@ -11,31 +11,21 @@ import { Metadata } from './metadata';
   styleUrl: './md-renderer.css',
 })
 export class MdRenderer implements OnInit {
-  private readonly _httpClient = inject(HttpClient);
+  private readonly http = inject(HttpClient);
 
-  public mdContent = '';
-  public metadata: Metadata = {};
+  mdContent = signal('');
+  metadata = signal<Metadata>({});
 
- ngOnInit(): void {
-
-    console.log('MD RENDERER STARTED');
-  this._httpClient
-    .get('/assets/tutorials/truth-table/truth-table.md', {
-      responseType: 'text',
-    })
-    .subscribe({
-      next: data => {
-        console.log('RAW:', data);
-
+  ngOnInit(): void {
+    this.http
+      .get('/assets/tutorials/truth-table/truth-table.md', {
+        responseType: 'text',
+      })
+      .subscribe(data => {
         const fileContent = frontMatter(data);
-        console.log('BODY:', fileContent.body);
 
-        this.metadata = fileContent.attributes as Metadata;
-        this.mdContent = fileContent.body;
-      },
-      error: err => {
-        console.error('HTTP ERROR:', err);
-      }
-    });
-}
+        this.metadata.set(fileContent.attributes as Metadata);
+        this.mdContent.set(fileContent.body);
+      });
+  }
 }

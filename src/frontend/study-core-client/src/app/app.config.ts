@@ -13,4 +13,3 @@ export const appConfig: ApplicationConfig = {
     provideMarkdown()
   ]
 };
-export class AppModule {}
