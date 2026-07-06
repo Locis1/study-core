@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "router.h"
+#include "modulues.h"
 
 #define BUFFER_SIZE 1024
 
@@ -77,6 +78,31 @@ void handleNotFound(SOCKET clientSock) {
     printf("Sent 404 Error\n");
 }
 
+void truthTableHandler(SOCKET clientSock) {
+    TruthTable table = truthTable_and();
+
+    char json[512];
+
+    snprintf(
+        json,
+        sizeof(json),
+        "{"
+        "\"operator\":\"and\","
+        "\"rows\":["
+        "{\"a\":%d,\"b\":%d,\"result\":%d},"
+        "{\"a\":%d,\"b\":%d,\"result\":%d},"
+        "{\"a\":%d,\"b\":%d,\"result\":%d},"
+        "{\"a\":%d,\"b\":%d,\"result\":%d}"
+        "]"
+        "}",
+        table.data[0][0], table.data[0][1], table.data[0][2],
+        table.data[1][0], table.data[1][1], table.data[1][2],
+        table.data[2][0], table.data[2][1], table.data[2][2],
+        table.data[3][0], table.data[3][1], table.data[3][2]
+    );
+
+    sendJson(clientSock, json);
+}
 // --- Routing Tabelle ---
 
 typedef void (*RouteHandler)(SOCKET);
@@ -90,6 +116,7 @@ Route routes[] = {
     {"/", handleIndex},
     {"/about", handleAbout},
     {"/api/v1/health", handleHealth},
+    {"/api/v1/truthtable/and", truthTableHandler},
 };
 
 int numRoutes = sizeof(routes) / sizeof(Route);

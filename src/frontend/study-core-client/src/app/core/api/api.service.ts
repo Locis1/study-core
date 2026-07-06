@@ -34,4 +34,9 @@ export class ApiService {
       switchMap(() => this.fetchJson<any>('api/v1/health', { status: 'DOWN' })),
     );
   }
+
+  get_truthTable_And(): Observable<any> {
+    return this.fetchJson<any>('api/v1/truthtable/and', { result: 'Error' });
+  };
+  
 }

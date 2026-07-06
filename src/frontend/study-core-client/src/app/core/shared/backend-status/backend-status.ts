@@ -15,7 +15,7 @@ export class BackendStatus implements OnInit {
 
   rawHtml = signal<string>('');
   healthData = signal<any>(null);
-
+  truthTableData = signal<any>(null);
   safeHtml = computed(() => {
     return this.sanitizer.bypassSecurityTrustHtml(this.rawHtml());
   });
@@ -26,6 +26,7 @@ export class BackendStatus implements OnInit {
   ) {
     effect(() => {
       console.log('Health Data changed:', this.healthData());
+      console.log('Truth Table Data changed:', this.truthTableData());
     });
   }
 
@@ -34,6 +35,12 @@ export class BackendStatus implements OnInit {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(json => {
         this.healthData.set(json);
+      });
+
+      this.apiService.get_truthTable_And()
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(json => {
+        this.truthTableData.set(json);
       });
   }
 }
