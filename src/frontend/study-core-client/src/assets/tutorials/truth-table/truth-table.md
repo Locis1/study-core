@@ -5,7 +5,10 @@ date: '2026-07-06'
 
 
 # Truth Table
-
+<truth-table-widget
+  expression="A && B"
+  variable-count="2">
+</truth-table-widget>
 The idea behind a truth table is to understand how propositional logic works.
 
 At the beginning, we will look at the **AND** operator. We have two propositions: **A** and **B**. Each proposition can have the value **true** or **false**.
@@ -56,10 +59,7 @@ Inside the loop, we print the current values of **A**, **B**, and the result of:
 a && b
 ```
 
-<md-content
-  expression="A && B"
-  variable-count="2">
-</md-content>
+
 
 This part is the actual **AND** operation.
 
