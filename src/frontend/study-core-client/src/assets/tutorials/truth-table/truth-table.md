@@ -56,6 +56,11 @@ Inside the loop, we print the current values of **A**, **B**, and the result of:
 a && b
 ```
 
+<md-content
+  expression="A && B"
+  variable-count="2">
+</md-content>
+
 This part is the actual **AND** operation.
 
 We can use the same idea for other operators, for example **OR**, **NOT**, or **XOR**.

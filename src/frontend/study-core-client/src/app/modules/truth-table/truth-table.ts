@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MdRenderer } from '../../core/shared/md-renderer/md-renderer';
 
 @Component({
@@ -7,4 +7,9 @@ import { MdRenderer } from '../../core/shared/md-renderer/md-renderer';
   templateUrl: './truth-table.html',
   styleUrl: './truth-table.css',
 })
-export class TruthTable {}
+export class TruthTable {
+
+  @Input() expression = '';
+  @Input() variableCount = 2;
+
+}

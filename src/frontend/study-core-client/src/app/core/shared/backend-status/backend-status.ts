@@ -41,6 +41,7 @@ export class BackendStatus implements OnInit {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(json => {
         this.truthTableData.set(json);
+        console.log('Truth Table Data received:', json);
       });
   }
 }

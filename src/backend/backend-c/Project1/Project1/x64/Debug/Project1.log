@@ -1,7 +1,5 @@
 ﻿  Quellen werden auf Modulabhängigkeiten überprüft...
-  modules.c
   router.c
-  Code wird generiert...
 C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(19,24): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
 C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(22,28): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
 C:\Users\cmaul\Desktop\study-core\src\backend\backend-c\Project1\router.c(35,24): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
